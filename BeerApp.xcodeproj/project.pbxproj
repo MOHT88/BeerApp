@@ -13,6 +13,8 @@
 		58D19BAA280096BA0058FEA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D19BA8280096BA0058FEA1 /* Main.storyboard */; };
 		58D19BAC280096BC0058FEA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58D19BAB280096BC0058FEA1 /* Assets.xcassets */; };
 		58D19BAF280096BC0058FEA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D19BAD280096BC0058FEA1 /* LaunchScreen.storyboard */; };
+		58D19BB72800A56F0058FEA1 /* BeerInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D19BB62800A56F0058FEA1 /* BeerInfoData.swift */; };
+		58D19BBE2803230A0058FEA1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D19BBD2803230A0058FEA1 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		58D19BAB280096BC0058FEA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58D19BAE280096BC0058FEA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		58D19BB0280096BC0058FEA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58D19BB62800A56F0058FEA1 /* BeerInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerInfoData.swift; sourceTree = "<group>"; };
+		58D19BBD2803230A0058FEA1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		58D19BA1280096BA0058FEA1 /* BeerApp */ = {
 			isa = PBXGroup;
 			children = (
-				58D19BA2280096BA0058FEA1 /* AppDelegate.swift */,
-				58D19BA4280096BA0058FEA1 /* SceneDelegate.swift */,
-				58D19BA6280096BA0058FEA1 /* ViewController.swift */,
-				58D19BA8280096BA0058FEA1 /* Main.storyboard */,
-				58D19BAB280096BC0058FEA1 /* Assets.xcassets */,
-				58D19BAD280096BC0058FEA1 /* LaunchScreen.storyboard */,
-				58D19BB0280096BC0058FEA1 /* Info.plist */,
+				58D19BB92803191B0058FEA1 /* Models */,
+				58D19BBC2803198B0058FEA1 /* Apps */,
+				58D19BB8280319040058FEA1 /* ViewControllers */,
+				58D19BBA280319320058FEA1 /* Storyboards */,
+				58D19BBB2803194B0058FEA1 /* Resources */,
 			);
 			path = BeerApp;
+			sourceTree = "<group>";
+		};
+		58D19BB8280319040058FEA1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				58D19BA6280096BA0058FEA1 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		58D19BB92803191B0058FEA1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				58D19BB62800A56F0058FEA1 /* BeerInfoData.swift */,
+				58D19BBD2803230A0058FEA1 /* NetworkManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		58D19BBA280319320058FEA1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				58D19BA8280096BA0058FEA1 /* Main.storyboard */,
+				58D19BAD280096BC0058FEA1 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		58D19BBB2803194B0058FEA1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				58D19BAB280096BC0058FEA1 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		58D19BBC2803198B0058FEA1 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				58D19BA2280096BA0058FEA1 /* AppDelegate.swift */,
+				58D19BA4280096BA0058FEA1 /* SceneDelegate.swift */,
+				58D19BB0280096BC0058FEA1 /* Info.plist */,
+			);
+			path = Apps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +186,9 @@
 			files = (
 				58D19BA7280096BA0058FEA1 /* ViewController.swift in Sources */,
 				58D19BA3280096BA0058FEA1 /* AppDelegate.swift in Sources */,
+				58D19BBE2803230A0058FEA1 /* NetworkManager.swift in Sources */,
 				58D19BA5280096BA0058FEA1 /* SceneDelegate.swift in Sources */,
+				58D19BB72800A56F0058FEA1 /* BeerInfoData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,10 +337,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G9KP9J4ZYQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BeerApp/Info.plist;
+				INFOPLIST_FILE = BeerApp/Apps/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,7 +353,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,10 +366,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = G9KP9J4ZYQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = BeerApp/Info.plist;
+				INFOPLIST_FILE = BeerApp/Apps/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,7 +382,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
